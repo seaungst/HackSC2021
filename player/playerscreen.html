@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <script src="playerscript.js"></script>
+        
+        <!-- bootstrap 4 -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        
+        
+        
+        <style>
+            .navitem {
+                color: #D1D9E3;
+            }
+            
+            .navbar {
+                background-color: #0A4465;
+            }
+            
+            body {
+                background-color: #D1D9E3;
+            }
+            
+            #screens {
+                padding: 5%;
+            }
+            
+            input {
+                border-bottom: 3px solid #95B0CE !important;
+                background-color: #B3C5D9 !important;
+                border-radius: 0px !important;
+                color: #050E17 !important;
+            }
+            
+            input::placeholder {
+                color: #5295C1 !important;
+            }
+            
+            .submit-button {
+                margin-top: 5%;
+                border: 0px;
+                padding: 5% 10%;
+                border-radius: 10px;
+                background-color: #95B0CE;
+                color: #D1D9E3;
+                
+            }
+        </style>
+    </head>
+    <body>
+        
+        
+        <nav class="navbar navbar-default" style="color: #050E17">            
+            <span class="navitem navbar-brand mb-0 h1" id="player-name">NAME</span>
+            <span class="navitem navbar-brand mb-0 h1" id="session-code">CODE</span>
+        </nav>
+        
+        
+        <div id="screens">
+        
+            <div id="letter-vote" style="display:none">
+
+                <div id="letter-buttons"></div>
+
+            </div>
+
+            <div id="two-truths" style="display:visible">
+
+                <form class="justify-content-center">
+                    <div class="form-group">
+                        <label for="firstTruth" class="h1">First truth:</label>
+                        <input type="text" class="form-control" id="firstTruth" placeholder="Write your first truth here..." />
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="secondTruth" class="h1">Second truth:</label>
+                        <input type="text" class="form-control" id="secondTruth" placeholder="Write your second truth here..." />
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="lie" class="h1">Lie:</label>
+                        <input type="text" class="form-control" id="lie" placeholder="Write your lie here..." />
+                    </div>
+                    
+                    <button type="submit" class="submit-button">Submit</button>
+                </form>
+
+
+            </div>
+        
+        </div>
+        
+        
+    </body>
+</html>
