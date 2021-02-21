@@ -1,0 +1,200 @@
+<HTML>
+<HEAD>
+    <meta charset="utf-8">
+    <TITLE>Ice Breakr</TITLE>
+    <link rel="shortcut icon" type="image/png" href="../assets/logo.png"/>
+    
+     <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+    		
+   <script type="text/javascript" src="HostTabs.js"></script>
+        <script src="jquery.js"></script> 
+    <script> 
+    $(function(){
+      $("#includedContent").load("Hangman.html"); 
+    });
+    </script>
+
+</HEAD>
+    
+    
+
+
+<BODY BGCOLOR=#95B0CE>
+    <link rel="stylesheet" href="HostBorder.css">
+    <link rel="stylesheet" href="HostTabs.css">
+<!-- Side navigation -->
+<div class="sidenav">
+    <a href="#"><b>ROOM CODE:</b> <span>000000</span> </a>
+    <!-- Hard Coded for Testing Purposes -->
+    <a href="#"><b>Host:</b><p>Ice Jim</p></a>
+    <a href="#"><b>Users:</b>
+        <p>Wes</p>
+        <p>Erin</p>
+        <p>Selena</p>
+    </a>
+    <a href="#"></a>
+  
+</div>	
+
+    
+    <div class = "megaDiv">
+<header>
+    <div id="logo-header">
+        <img id="logo-image" src="../assets/logo.png">
+        Ice Breakr
+    </div>
+</header>
+    
+
+
+
+
+<link rel="stylesheet" href="CSSTabs.css">
+
+<button class="tablink" onclick="openPage('Home', this, 'white')"id="defaultOpen">Home</button>
+<button class="tablink" onclick="openPage('Polls', this, 'white')">Polls</button>
+<button class="tablink" onclick="openPage('HangMan', this, 'white')">Hangman</button>
+<button class="tablink" onclick="openPage('2Truths', this, 'white')">2 Truths 1 Lie</button>
+<button class="tablink" onclick="openPage('SomethingFun', this, 'white')">Something Fun?</button>
+
+
+    
+<div id="Home" class="tabcontent">
+  <h3>Home</h3>
+  <p>Home is where the heart is..</p>
+</div>
+
+<div id="Polls" class="tabcontent">
+  <h3>Polls</h3>
+  <p>Argue about something small and fun!</p>
+
+        <div class="tab">
+            <button class="tablink" onclick="openPage('Weather', this, 'white')">Weather Poll</button>                            
+            <button class="tablinks" onclick="openPage('funny', this, 'white')">Funny/Contoversial</button>
+            <button class="tablinks" onclick="openPage('bestAnimal', this, 'white')">Best Animal</button>
+        </div>
+   
+ 
+</div>
+
+<div id="HangMan" class="tabcontent">
+  <h3>Hangman</h3>
+  <p>Guess your peer's favorite....</p>
+
+        <div class="tab">
+            <button class="tablinks" onclick="openPoll('Animal')">Animal</button>
+            <button class="tablinks" onclick="openCity('HumanBones')">Human Bones</button>
+            <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+        </div>
+   
+</div>
+
+    
+<div id="2Truths" class="tabcontent">
+  <h3>2 Truths, 1 Lie</h3>
+  <p>We are who we are and what we do.</p>
+
+            <div class="tab">
+            <button class="tablinks" onclick="openPage('hosts', this, 'white')">About the host</button>
+            <button class="tablinks" onclick="openPage('users', this, 'white')">About your peers</button>
+            <button class="tablinks" onclick="openPage('world', this, 'white')">About the world</button>
+        </div>
+    </div>
+      
+
+
+<div id="SomethingFun" class="tabcontent">
+  <h3>Just for fun!</h3>
+  <p>hehe have fun decorating my page :D</p>
+     <h1>Draw Here :D</h1>
+        
+</div>
+    
+<div id="Weather" class="tabcontent">
+  <h3>Weather Poll</h3>
+  <p>What's your favorite kind of weather?</p>
+    <ul>
+        <li>Sunny</li>
+        <li>Overcast</li>
+        <li>Rainy</li>
+        <li>Snowing</li>
+    </ul>
+</div>    
+
+<div id="funny" class="tabcontent">
+  <h3>Funny Poll</h3>
+  <p>Pineapples. Do they belong on pizza?</p>
+    <ul>
+        <li>Never.</li>
+        <li>Sometimes</li>
+        <li>Yes please</li>
+    </ul>
+</div>  
+
+<div id="bestAnimal" class="tabcontent">
+  <h3>Best Animal Poll</h3>
+  <p>Only one animal can survive? Which one should it be?</p>
+    <ul>
+        <li>Dogs</li>
+        <li>Cats</li>
+        <li>Frogs</li>
+        <li>Lizards</li>
+        <li>Penguins</li>
+    </ul>
+</div>  
+        
+<div id="hosts" class="tabcontent">
+  <h3>2 truths 1 lie</h3>
+  <p>Which is the lie about the host?(in this case erin)</p>
+    <ul>
+        <li>I have a pet Rat</li>
+        <li>I am considered to be famous in the Philippines</li>
+        <li>I hate wearing socks</li>
+    </ul>
+</div>  
+        
+<div id="users" class="tabcontent">
+  <h3>2 truths 1 lie</h3>
+  <p>Which is the lie about the a user?(in this case Wes)</p>
+    <ul>
+        <li>I have eaten an average of 9 fundip packets in the past few days</li>
+        <li>We love Hack SC</li>
+        <li>I got my shoelaces from the President</li>
+    </ul>
+</div> 
+        
+<div id="world" class="tabcontent">
+  <h3>2 truths 1 lie</h3>
+  <p>Which is the lie about the World (in this case selena)?</p>
+    <ul>
+        <li>I love mayonnaise</li>
+        <li>I love ketchup</li>
+        <li>I love mustard</li>
+    </ul>
+</div> 
+
+
+	<!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<!-- Always remember to call the above files first before calling the bootstrap.min.js file -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>	
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/8.2.9/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="/__/firebase/8.2.9/firebase-analytics.js"></script>
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+    
+</BODY>
+</HTML>
