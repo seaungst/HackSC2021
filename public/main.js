@@ -19,11 +19,11 @@ function showHide(dest) {
 
 function generateRoomCode() {
     var hostName = document.getElementById("host-name").value;
-    var roomCode = Math.floor(100000 + Math.random() * 900000);
+    //var roomCode = Math.floor(100000 + Math.random() * 900000);
     
     document.getElementById("room-code-field").style.display = "block"; 
     
-    document.getElementById("room-code").innerHTML = roomCode; 
+    //document.getElementById("room-code").innerHTML = roomCode; 
     document.getElementById("host-name-display").innerHTML = hostName;
     
 }
