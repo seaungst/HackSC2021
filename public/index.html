@@ -1,89 +1,171 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8">
+        <title>Ice Breakr</title>   
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        
+        <link href="style.css" rel="stylesheet" />
+        
+        <link rel="shortcut icon" type="image/png" href="assets/logo.png"/> 
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="main.js"></script>
+    </head>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/8.2.9/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/8.2.9/firebase-auth.js"></script>
-    <script defer src="/__/firebase/8.2.9/firebase-database.js"></script>
-    <script defer src="/__/firebase/8.2.9/firebase-firestore.js"></script>
-    <script defer src="/__/firebase/8.2.9/firebase-functions.js"></script>
-    <script defer src="/__/firebase/8.2.9/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/8.2.9/firebase-storage.js"></script>
-    <script defer src="/__/firebase/8.2.9/firebase-analytics.js"></script>
-    <script defer src="/__/firebase/8.2.9/firebase-remote-config.js"></script>
-    <script defer src="/__/firebase/8.2.9/firebase-performance.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <body>
+    
+        <nav class="navbar navbar-custom navbar-fixed-top">
+            <div>
+                <div id="logo-header">
+                    <img id="logo-image" src="assets/logo.png">
+                    Ice Breakr
+                </div>
+                
+                <ul class="nav navbar-nav">
+                    <li class="active" onClick="showHide(&#39;homePage&#39;)"><a href="#">&nbsp;&nbsp;<span class="glyphicon glyphicon-home"></span> Home</a></li>
+                        
+                    <li onClick="showHide(&#39;createRoom&#39;)"><a href="#" >&nbsp;&nbsp;<span class="glyphicon glyphicon-edit"></span> Create a Room</a></li>
+                    
+                    <li><a href="#" onClick="showHide(&#39;joinRoom&#39;)">&nbsp;&nbsp;<span class="glyphicon glyphicon-share"></span> Join a Room</a></li>
+                </ul>
+                
+                <ul class="nav navbar-nav navbar-right"> 
+                    <li onClick="showHide(&#39;contact&#39;)"><a href="#">&nbsp;&nbsp;<span class="glyphicon glyphicon-info-sign"></span> Contact Us &nbsp;</a></li>
+                    
+                </ul>
+            </div>
+        </nav>
+            
+        <div id="image-background">
+            <img id="background" src="assets/background1.jpeg">
+        </div>
+        
+        <div id="homePage" style="display: block;">
+            <div id="info-area">
+                <div class="header">
+                    Welcome to Ice Breakr !
+                </div>
+                <p class="info-text">
+                    Unsure of how to get your team acquainted at your first meeting? With Ice Breakr, you and your team can find the perfect way to "break the ice" even in a virtual setting. Ice Breakr is a brand new web service that is perfect for team meetings, classroom settings, or for any group seeking a fun and easy way to get to know one another.
+                </p>
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+                <div class="sub-header">
+                    How to Get Started: Hosting a Room
+                </div>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+                <p class="info-text">Are you looking to introduce the members of your group to one another? <br> Here's how to create a room for your group to join.</p>
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+                <ol class="list-group">
+                    <li class="list-group-item">1. Select "Create a Room" at the top of the site. </li>
+                    <li class="list-group-item">2. Enter your name. ( This name will be displayed as the room's host when participants join. )</li>
+                    <li class="list-group-item">3. A "room code" will be generated. Participants will use this to join your room.</li>
+                    <li class="list-group-item">4. Confirm that all information is correct, then enter the room.</li>
+                    <li class="list-group-item">5. Share your screen with your meeting participants. ( This will work online, via a screensharing service, or in person, as long as everyone present can see your screen. )</li>
+                    <li class="list-group-item">6. Instruct your participants to follow the "How to Get Started: Joining a Room" instruction set on our website below.</li>
+                    <li class="list-group-item">7. When all participants have loaded into the room, you, as the host, will be able to choose between several Ice Breakr games.</li>
+                    <li class="list-group-item">8. Load games for your participants, and have fun!</li>
+                </ol>
+
+                <div class="sub-header">
+                    How to Get Started: Joining a Room
+                </div>
+
+                <p class="info-text">Has your meeting introduced Ice Breakr for group introduction? <br> Here's how to join a room created by your meeting host.</p>
+
+                <ol class="list-group">
+                    <li class="list-group-item">1. Select "Join a Room" at the top of the site. </li>
+                    <li class="list-group-item">2. Enter your name. ( The host will be able to identify your responses by your name. )</li>
+                    <li class="list-group-item">3. Enter the room code provided by your host.</li>
+                    <li class="list-group-item">4. Confirm that all information is correct, then enter the room.</li>
+                    <li class="list-group-item">5. Wait for the host to select an Ice Breakr game. You will see a prompt on your screen when a new game is selected.</li>
+                    <li class="list-group-item">6. Follow game instructions as they appear or as they are explained, and have fun!</li>
+                </ol>
+            </div>
+        </div>
+            
+        <div id="createRoom" style="display: none;">
+            <div class="header">
+                Create a Room
+            </div>
+            <p class="info-text">Here to create an Ice Breakr room for your next meeting?
+            <br>Fill in your info below to get started!
+            <br><br>If you have any trouble creating a room, please refer to the instructions on our Homepage.
+            <br>Enjoy!</p>
+            
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="host-name">Please enter your name:</label>
+                    <input type="text" class="form-control" id="host-name" placeholder="Host Name">
+                    <br>
+                    <button class="btn btn-primary" onClick="generateRoomCode()" href="javascript:void(0)">Submit</button>
+                </div>
+            </form>
+            
+            <div id="room-code-field" style="display: block;">
+                <div class="sub-header">
+                    Room Code
+                </div>
+                                
+                <p class="info-text">
+                    Welcome, <span id="host-name-display">Host Name</span><br><br>
+                    
+                    Your room code is:<br><span id="room-code">000000</span>
+                </p>
+                
+                <button id="enter-room-host" class="btn btn-primary">Enter Room</button>
+                
+            </div>
+            
+        </div>
+        
+        <div id="joinRoom" style="display: none;">
+            <div class="header">
+                Join a Room
+            </div>
+            <p class="info-text">Here to join an Ice Breakr room created by your meeting's host?
+            <br>Fill in your info below to get started!
+            <br><br>If you have any trouble creating a room, please refer to the instructions on our Homepage.
+            <br>Enjoy!</p>
+            
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="participant-name">Please enter your name:</label>
+                    <input type="text" class="form-control" id="participant-name" placeholder="Participant Name">
+                    <br>
+                    
+                    <label for="enter-room-code">Please enter the room code:</label>
+                    <input type="text" class="form-control" id="enter-room-code" placeholder="Room Code">
+                    
+                    <button id="enter-room-participant" class="btn btn-primary">Enter Room</button>
+                </div>
+            </form>
+        
+            
+        </div>
+        
+        <div id="contact" style="display: none;">
+            <div class="header">
+                Contact Us
+            </div>
+            
+            <p class="info-text">Thank you so much for using Ice Breakr!
+            <br><br>If you have any questions that were not answered by the instructions on our main page, you can reach us using the information below. </p>
+            
+            <p class="info-text">Email:   
+                <a href="mailto:icebreakr_team@protonmail.com">
+                icebreakr_team@protonmail.com
+                </a>
+            </p>
+        </div>
+    
+        
+        <footer>
+            <img id="footer-image" src="assets/logo.png">
+        </footer>
+    </body>
+    
 </html>

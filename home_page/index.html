@@ -3,28 +3,39 @@
     
     <head>
         <meta charset="utf-8">
-        <title>Ice Breakr</title>
+        <title>Ice Breakr</title>   
+        
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        
         <link href="style.css" rel="stylesheet" />
+        
+        <link rel="shortcut icon" type="image/png" href="../assets/logo.png"/> 
+        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="main.js"></script>
     </head>
 
     <body>
     
         <nav class="navbar navbar-custom navbar-fixed-top">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="#">Ice Breakr</a>
+            <div>
+                <div id="logo-header">
+                    <img id="logo-image" src="../assets/logo.png">
+                    Ice Breakr
                 </div>
+                
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-edit"></span> Create a Game</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-share"></span> Join a Game</a></li>
+                    <li class="active" onClick="showHide(&#39;homePage&#39;)"><a href="#">&nbsp;&nbsp;<span class="glyphicon glyphicon-home"></span> Home</a></li>
+                        
+                    <li onClick="showHide(&#39;createRoom&#39;)"><a href="#" >&nbsp;&nbsp;<span class="glyphicon glyphicon-edit"></span> Create a Room</a></li>
+                    
+                    <li><a href="#" onClick="showHide(&#39;joinRoom&#39;)">&nbsp;&nbsp;<span class="glyphicon glyphicon-share"></span> Join a Room</a></li>
                 </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> About Us</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-info-sign"></span> Contact Us</a></li>
+                
+                <ul class="nav navbar-nav navbar-right"> 
+                    <li onClick="showHide(&#39;contact&#39;)"><a href="#">&nbsp;&nbsp;<span class="glyphicon glyphicon-info-sign"></span> Contact Us &nbsp;</a></li>
+                    
                 </ul>
             </div>
         </nav>
@@ -33,50 +44,128 @@
             <img id="background" src="../assets/background1.jpeg">
         </div>
         
-        <div id="info-area">
+        <div id="homePage" style="display: block;">
+            <div id="info-area">
+                <div class="header">
+                    Welcome to Ice Breakr !
+                </div>
+                <p class="info-text">
+                    Unsure of how to get your team acquainted at your first meeting? With Ice Breakr, you and your team can find the perfect way to "break the ice" even in a virtual setting. Ice Breakr is a brand new web service that is perfect for team meetings, classroom settings, or for any group seeking a fun and easy way to get to know one another.
+                </p>
+
+                <div class="sub-header">
+                    How to Get Started: Hosting a Room
+                </div>
+
+                <p class="info-text">Are you looking to introducte the members of your group to one another? <br> Here's how to create a room for your group to join.</p>
+
+                <ol class="list-group">
+                    <li class="list-group-item">1. Select "Create a Room" at the top of the site. </li>
+                    <li class="list-group-item">2. Enter your name. ( This name will be displayed as the room's host when participants join. )</li>
+                    <li class="list-group-item">3. A "room code" will be generated. Participants will use this to join your room.</li>
+                    <li class="list-group-item">4. Confirm that all information is correct, then enter the room.</li>
+                    <li class="list-group-item">5. Share your screen with your meeting participants. ( This will work online, via a screensharing service, or in person, as long as everyone present can see your screen. )</li>
+                    <li class="list-group-item">6. Instruct your participants to follow the "How to Get Started: Joining a Room" instruction set on our website below.</li>
+                    <li class="list-group-item">7. When all participants have loaded into the room, you, as the host, will be able to choose between several Ice Breakr games.</li>
+                    <li class="list-group-item">8. Load games for your participants, and have fun!</li>
+                </ol>
+
+                <div class="sub-header">
+                    How to Get Started: Joining a Room
+                </div>
+
+                <p class="info-text">Has your meeting introduced Ice Breakr for group introduction? <br> Here's how to join a room created by your meeting host.</p>
+
+                <ol class="list-group">
+                    <li class="list-group-item">1. Select "Join a Room" at the top of the site. </li>
+                    <li class="list-group-item">2. Enter your name. ( The host will be able to identify your responses by your name. )</li>
+                    <li class="list-group-item">3. Enter the room code provided by your host.</li>
+                    <li class="list-group-item">4. Confirm that all information is correct, then enter the room.</li>
+                    <li class="list-group-item">5. Wait for the host to select an Ice Breakr game. You will see a prompt on your screen when a new game is selected.</li>
+                    <li class="list-group-item">6. Follow game instructions as they appear or as they are explained, and have fun!</li>
+                </ol>
+            </div>
+        </div>
+            
+        <div id="createRoom" style="display: none;">
             <div class="header">
-                Welcome to Ice Breakr!
+                Create a Room
             </div>
-            <p class="info-text">
-                Unsure of how to get your team acquainted at your first meeting? With Ice Breakr, you and your team can find the perfect way to "break the ice" even in a virtual setting. Ice Breakr is a brand new web service that is perfect for team meetings, classroom settings, or for any group seeking a fun and easy way to get to know one another.
-            </p>
+            <p class="info-text">Here to create an Ice Breakr room for your next meeting?
+            <br>Fill in your info below to get started!
+            <br><br>If you have any trouble creating a room, please refer to the instructions on our Homepage.
+            <br>Enjoy!</p>
             
-            <div class="sub-header">
-                How to Get Started: Hosting a Game
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="host-name">Please enter your name:</label>
+                    <input type="text" class="form-control" id="host-name" placeholder="Host Name">
+                    <br>
+                    <button class="btn btn-primary" onClick="generateRoomCode()" href="javascript:void(0)">Submit</button>
+                </div>
+            </form>
+            
+            <div id="room-code-field" style="display: block;">
+                <div class="sub-header">
+                    Room Code
+                </div>
+                                
+                <p class="info-text">
+                    Welcome, <span id="host-name-display">Host Name</span><br><br>
+                    
+                    Your room code is:<br><span id="room-code">000000</span>
+                </p>
+                
+                <button id="enter-room-host" class="btn btn-primary">Enter Room</button>
+                
             </div>
-            
-            <p class="info-text">Are you looking to introducte the members of your group to one another? <br> Here's how to create a game for your group to join.</p>
-
-            <ol class="list-group" id="get_started">
-                <li class="list-group-item">1. Select "Create a Game" at the top of the site. </li>
-                <li class="list-group-item">2. Enter your name. ( This name will be displayed as the room's host when participants join. )</li>
-                <li class="list-group-item">3. A "room code" will be generated. Participants will use this to join your game.</li>
-                <li class="list-group-item">4. Confirm that all information is correct, then enter the room.</li>
-                <li class="list-group-item">5. Share your screen with your meeting participants. ( This will work online, via a screensharing service, or in person, as long as everyone present can see your screen. )</li>
-                <li class="list-group-item">6. Instruct your participants to follow the "How to Get Started: Joining a Game" instruction set on our website below.</li>
-                <li class="list-group-item">7. When all participants have loaded into the game, you, as the host, will be able to choose between several Ice Breakr games.</li>
-                <li class="list-group-item">8. Load games for your participants, and have fun!</li>
-            </ol>
-
-            <div class="sub-header">
-                How to Get Started: Joining a Game
-            </div>
-            
-            <p class="info-text">Has your meeting host introduced Ice Breakr <br> Here's how to create a game for your group to join.</p>
-
-            <ol class="list-group" id="get_started">
-                <li class="list-group-item">1. Select "Create a Game" at the top of the site. </li>
-                <li class="list-group-item">2. Enter your name. ( This name will be displayed as the room's host when participants join. )</li>
-                <li class="list-group-item">3. A "room code" will be generated. Participants will use this to join your game.</li>
-                <li class="list-group-item">4. Confirm that all information is correct, then enter the room.</li>
-                <li class="list-group-item">5. Share your screen with your meeting participants. ( This will work online, via a screensharing service, or in person, as long as everyone present can see your screen. )</li>
-                <li class="list-group-item">6. Instruct your participants to follow the "How to Get Started: Joining a Game" instruction set on our website below.</li>
-                <li class="list-group-item">7. When all participants have loaded into the game, you, as the host, will be able to choose between several Ice Breakr games.</li>
-                <li class="list-group-item">8. Load games for your participants, and have fun!</li>
-            </ol>
             
         </div>
+        
+        <div id="joinRoom" style="display: none;">
+            <div class="header">
+                Join a Room
+            </div>
+            <p class="info-text">Here to join an Ice Breakr room created by your meeting's host?
+            <br>Fill in your info below to get started!
+            <br><br>If you have any trouble creating a room, please refer to the instructions on our Homepage.
+            <br>Enjoy!</p>
+            
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="participant-name">Please enter your name:</label>
+                    <input type="text" class="form-control" id="participant-name" placeholder="Participant Name">
+                    <br>
+                    
+                    <label for="enter-room-code">Please enter the room code:</label>
+                    <input type="text" class="form-control" id="enter-room-code" placeholder="Room Code">
+                    
+                    <button id="enter-room-participant" class="btn btn-primary">Enter Room</button>
+                </div>
+            </form>
+        
+            
+        </div>
+        
+        <div id="contact" style="display: none;">
+            <div class="header">
+                Contact Us
+            </div>
+            
+            <p class="info-text">Thank you so much for using Ice Breakr!
+            <br><br>If you have any questions that were not answered by the instructions on our main page, you can reach us using the information below. </p>
+            
+            <p class="info-text">Email:   
+                <a href="mailto:icebreakr_team@protonmail.com">
+                icebreakr_team@protonmail.com
+                </a>
+            </p>
+        </div>
     
+        
+        <footer>
+            <img id="footer-image" src="../assets/logo.png">
+        </footer>
     </body>
     
 </html>

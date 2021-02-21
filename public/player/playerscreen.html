@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- bootstrap 4 -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        
+        
+        <link rel="stylesheet" href="playerstyle.css">
+        <script type="text/javascript" src="playerscript.js"></script>
+        
+        
+        <!-- This is here cause i'm serializing result data... -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+    </head>
+    <body>
+        <nav class="navbar navbar-default" style="color: #050E17">            
+            <span class="navitem navbar-brand mb-0 h1" id="player-name">NAME</span>
+            <span class="navitem navbar-brand mb-0 h1" id="session-code">CODE</span>
+        </nav>
+        
+        <div id=test-nav style="display:block">
+            <!-- change display:block to display:none to hide -->
+            <button onclick="goTo('waiting-screen')">Waiting</button>
+            <button onclick="goTo('letter-vote')">Letter Vote</button>
+            <button onclick="goTo('two-truths')">Two Truths</button>
+            <button onclick="goTo('question-response')">Question</button>
+            <button onclick="goTo('poll')">Poll</button>
+            <span id="test-output">Output: </span>
+        </div>
+        
+        
+        <div id="screens">
+        
+            <div id="letter-vote" style="display:none">
+                <div class="h1">Guess a letter...</div>
+                    
+                <form id="hangman-letters">
+                    <input type="radio" id="a-hangman" name="hangman-letters" value="a">
+                    <label class="letter-button" for="a-hangman">A</label>
+
+                    <input type="radio" id="b-hangman" name="hangman-letters" value="b">
+                    <label class="letter-button" for="b-hangman">B</label>
+
+                    <input type="radio" id="c-hangman" name="hangman-letters" value="c">
+                    <label class="letter-button" for="c-hangman">C</label>
+
+                    <input type="radio" id="d-hangman" name="hangman-letters" value="d">
+                    <label class="letter-button" for="d-hangman">D</label>
+
+                    <input type="radio" id="e-hangman" name="hangman-letters" value="e">
+                    <label class="letter-button" for="e-hangman">E</label>
+
+                    <input type="radio" id="f-hangman" name="hangman-letters" value="f">
+                    <label class="letter-button" for="f-hangman">F</label>
+
+                    <input type="radio" id="g-hangman" name="hangman-letters" value="g">
+                    <label class="letter-button" for="g-hangman">G</label>
+
+                    <input type="radio" id="h-hangman" name="hangman-letters" value="h">
+                    <label class="letter-button" for="h-hangman">H</label>
+
+                    <input type="radio" id="i-hangman" name="hangman-letters" value="i">
+                    <label class="letter-button" for="i-hangman">I</label>
+
+                    <input type="radio" id="j-hangman" name="hangman-letters" value="j">
+                    <label class="letter-button" for="j-hangman">J</label>
+
+                    <input type="radio" id="k-hangman" name="hangman-letters" value="k">
+                    <label class="letter-button" for="k-hangman">K</label>
+
+                    <input type="radio" id="l-hangman" name="hangman-letters" value="l">
+                    <label class="letter-button" for="l-hangman">L</label>
+
+                    <input type="radio" id="m-hangman" name="hangman-letters" value="m">
+                    <label class="letter-button" for="m-hangman">M</label>
+
+                    <input type="radio" id="n-hangman" name="hangman-letters" value="n">
+                    <label class="letter-button" for="n-hangman">N</label>
+
+                    <input type="radio" id="o-hangman" name="hangman-letters" value="o">
+                    <label class="letter-button" for="o-hangman">O</label>
+
+                    <input type="radio" id="p-hangman" name="hangman-letters" value="p">
+                    <label class="letter-button" for="p-hangman">P</label>
+
+                    <input type="radio" id="q-hangman" name="hangman-letters" value="q">
+                    <label class="letter-button" for="q-hangman">Q</label>
+
+                    <input type="radio" id="r-hangman" name="hangman-letters" value="r">
+                    <label class="letter-button" for="r-hangman">R</label>
+
+                    <input type="radio" id="s-hangman" name="hangman-letters" value="s">
+                    <label class="letter-button" for="s-hangman">S</label>
+
+                    <input type="radio" id="t-hangman" name="hangman-letters" value="t">
+                    <label class="letter-button" for="t-hangman">T</label>
+
+                    <input type="radio" id="u-hangman" name="hangman-letters" value="u">
+                    <label class="letter-button" for="u-hangman">U</label>
+
+                    <input type="radio" id="v-hangman" name="hangman-letters" value="v">
+                    <label class="letter-button" for="v-hangman">V</label>
+
+                    <input type="radio" id="w-hangman" name="hangman-letters" value="w">
+                    <label class="letter-button" for="w-hangman">W</label>
+
+                    <input type="radio" id="x-hangman" name="hangman-letters" value="x">
+                    <label class="letter-button" for="x-hangman">X</label>
+
+                    <input type="radio" id="y-hangman" name="hangman-letters" value="y">
+                    <label class="letter-button" for="y-hangman">Y</label>
+
+                    <input type="radio" id="z-hangman" name="hangman-letters" value="z">
+                    <label class="letter-button" for="z-hangman">Z</label>
+                    
+                    <br />
+                    <button type="button" class="submit-button" onclick="getData('hangman-letters'); return false;">Submit</button>
+                </form>
+                
+                
+                
+                
+            </div>
+
+            
+            
+            <div id="two-truths" style="display:none">
+
+                <form id="ttForm">
+                    <div class="form-group">
+                        <label for="firstTruth" class="h1">First truth:</label>
+                        <input type="text" class="form-control" id="firstTruth" name="firstTruth" placeholder="Write your first truth here..." />
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="secondTruth" class="h1">Second truth:</label>
+                        <input type="text" class="form-control" id="secondTruth" name="secondTruth" placeholder="Write your second truth here..." />
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="lie" class="h1">Lie:</label>
+                        <input type="text" class="form-control" id="lie" name="lie" placeholder="Write your lie here..." />
+                    </div>
+                    
+                    <br />
+                    <button type="button" class="submit-button" onclick="getData('ttForm'); return false;">Submit</button>
+                </form>
+            </div>
+
+            
+            
+            
+            
+            
+            
+            <div id="question-response" style="display:none">
+                <form id="qrForm">
+                    <div class="form-group">
+                        <label for="qrQuestion" class="h1" id="question-id">Filler text for question. Please answer this question?</label>
+                        <input type="text" class="form-control" id="qrQuestion" name="qrQuestion" placeholder="Write your answer here..." />
+                    </div>
+                    
+                    <br />
+                    <button type="button" class="submit-button" onclick="getData('qrForm'); return false;">Submit</button>
+                </form>
+            </div>
+            
+            
+            
+            
+            
+            
+
+            <div id="poll" style="display:none">
+
+                <form id="animal-question">
+                    <div class="h1">Which is your favorite animal?</div>
+                    
+                    <div class="form-check">
+                        <label class="radio">
+                            <span class="radio-input">
+                                <input type="radio" name="poll-animal" value="dog">
+                                <span class="radio-control"></span>
+                            </span>
+                            <span class="radio-label">Dog</span>
+                        </label>
+                        <label class="radio">
+                            <span class="radio-input">
+                                <input type="radio" name="poll-animal" value="cat">
+                                <span class="radio-control"></span>
+                            </span>
+                            <span class="radio-label">Cat</span>
+                        </label>
+                        <label class="radio">
+                            <span class="radio-input">
+                                <input type="radio" name="poll-animal" value="bird">
+                                <span class="radio-control"></span>
+                            </span>
+                            <span class="radio-label">Bird</span>
+                        </label>
+                        <label class="radio">
+                            <span class="radio-input">
+                                <input type="radio" name="poll-animal" value="lizard">
+                                <span class="radio-control"></span>
+                            </span>
+                            <span class="radio-label">Lizard</span>
+                        </label>
+                    </div>
+                    
+                    <br />
+                    <button type="button" class="submit-button" onclick="getData('animal-question'); return false;">Submit</button>
+                </form>
+
+
+            </div>
+            
+            
+            
+            <div id="waiting-screen" style="display:block">
+                <div class="h1" style="text-align: center">Waiting...</div>
+                <div class="hint-text" style="font-size: 20px; text-align: center">This screen will change when the host starts an icebreaker...</div>
+                <img class="loader" src="icebreakerbear.png" />
+            </div>
+        
+        </div>
+        
+        
+    </body>
+</html>
