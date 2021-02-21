@@ -1,114 +1,181 @@
 <HTML>
 <HEAD>
-<TITLE>tab display practice</TITLE>
+    <meta charset="utf-8">
+    <TITLE>HOSTING ICEBREAKR</TITLE>
      <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+    		
+   <script type="text/javascript" src="C:\Users\12096\Desktop\Host\HostTabs.js"></script>
+        <script src="jquery.js"></script> 
+    <script> 
+    <script> 
+    $(function(){
+      $("#includedContent").load("Hangman.html"); 
+    });
+    </script>
 
 </HEAD>
+    
+    
+
 
 <BODY BGCOLOR=#95B0CE>
-<link rel="stylesheet" href="HostBorder.css">
+    <link rel="stylesheet" href="HostBorder.css">
+    <link rel="stylesheet" href="HostTabs.css">
+<!-- Side navigation -->
+<div class="sidenav">
+    <a href="#">JOIN CODE:</a>
+    <a href="#">Host:</a>
+    <a href="#">Users:</a>
+    <a href="#"></a>
+  
+</div>	
 
-
-<<header>
-  <h2>Ice Breakr Host</h2>
+    
+    <div class = "megaDiv">
+<header>
+    <img src = "logo.png" alt = "Test Image" border = "3" align = "right"/>
+    <h2>Ice Breakr Host</h2>
 </header>
     
-</div>
 
 
 
-  
-<body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Let's Argue lol
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Weather Poll</a>
-          <a class="dropdown-item" href="#">Controversial Poll</a>
-          <a class="dropdown-item" href="#">Random Poll</a>
-        </div>
-        </li>
-       
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" onclick=openPage('Home', this, 'red')> id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              
-        Hangman 
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" onclick=>Animals</a>
-          <a class="dropdown-item" href="#">Disney</a>
-          <a class="dropdown-item" href="#">Fruit</a>
-        </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              
-        2 Truths and a Lie
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">From the Host</a>
-          <a class="dropdown-item" href="#">From a Player</a>
-        </div>
-        </li>
-      </ul>
-    </div>
-  </nav>
 
-    
+<link rel="stylesheet" href="CSSTabs.css">
+
+<button class="tablink" onclick="openPage('Home', this, 'white')"id="defaultOpen">Home</button>
+<button class="tablink" onclick="openPage('Polls', this, 'white')">Polls</button>
+<button class="tablink" onclick="openPage('HangMan', this, 'white')">Hangman</button>
+<button class="tablink" onclick="openPage('2Truths', this, 'white')">2 Truths 1 Lie</button>
+<button class="tablink" onclick="openPage('SomethingFun', this, 'white')">Something Fun?</button>
+
+
     
 <div id="Home" class="tabcontent">
   <h3>Home</h3>
   <p>Home is where the heart is..</p>
 </div>
 
-<div id="Hangman" class="tabcontent">
-  <h3>News</h3>
-  <p>Some news this fine day!</p>
+<div id="Polls" class="tabcontent">
+  <h3>Polls</h3>
+  <p>Argue about something small and fun!</p>
+
+        <div class="tab">
+            <button class="tablink" onclick="openPage('Weather', this, 'white')">Weather Poll</button>                            
+            <button class="tablinks" onclick="openPage('funny', this, 'white')">Funny/Contoversial</button>
+            <button class="tablinks" onclick="openPage('bestAnimal', this, 'white')">Best Animal</button>
+        </div>
+   
+ 
+</div>
+        
+        
+    
+    
+
+<div id="HangMan" class="tabcontent">
+  <h3>Hangman</h3>
+  <p>Guess your peer's favorite....</p>
+
+        <div class="tab">
+            <button class="tablinks" onclick="openPoll('Animal')">Animal</button>
+            <button class="tablinks" onclick="openCity('HumanBones')">Human Bones</button>
+            <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+        </div>
+   
 </div>
 
-<div id="Contact" class="tabcontent">
-  <h3>Contact</h3>
-  <p>Get in touch, or swing by for a cup of coffee.</p>
-</div>
+    
+<div id="2Truths" class="tabcontent">
+  <h3>2 Truths, 1 Lie</h3>
+  <p>We are who we are and what we do.</p>
 
-<div id="About" class="tabcontent">
-  <h3>About</h3>
-  <p>Who we are and what we do.</p>
-</div>
+            <div class="tab">
+            <button class="tablinks" onclick="openPage('hosts', this, 'white')">About the host</button>
+            <button class="tablinks" onclick="openPage('users', this, 'white')">About your peers</button>
+            <button class="tablinks" onclick="openPage('world', this, 'white')">About the world</button>
+        </div>
+    </div>
+      
+
 
 <div id="SomethingFun" class="tabcontent">
   <h3>Just for fun!</h3>
   <p>hehe have fun decorating my page :D</p>
      <h1>Draw Here :D</h1>
-
-		
-		
-   <script src="file:///C:\Users\12096\Desktop\CSHTML\EmanatePage.js"></script>
-
-   <div id="canvasDiv">
-      <canvas id="canvasSignature" width="500px" height="500px" style="border:2px solid #000000;"></canvas>
-   </div>
-   <script src="JSDraw.js"></script>
-   
+        
 </div>
+    
+<div id="Weather" class="tabcontent">
+  <h3>Weather Poll</h3>
+  <p>What's your favorite kind of weather?</p>
+    <ul>
+        <li>Sunny</li>
+        <li>Overcast</li>
+        <li>Rainy</li>
+        <li>Snowing</li>
+    </ul>
+</div>    
 
-<script src="JSTabs.js"></script>
+<div id="funny" class="tabcontent">
+  <h3>Funny Poll</h3>
+  <p>Pineapples. Do they belong on pizza?</p>
+    <ul>
+        <li>Never.</li>
+        <li>Sometimes</li>
+        <li>Yes please</li>
+    </ul>
+</div>  
+
+<div id="bestAnimal" class="tabcontent">
+  <h3>Best Animal Poll</h3>
+  <p>Only one animal can survive? Which one should it be?</p>
+    <ul>
+        <li>Dogs</li>
+        <li>Cats</li>
+        <li>Frogs</li>
+        <li>Lizards</li>
+        <li>Penguins</li>
+    </ul>
+</div>  
+        
+<div id="hosts" class="tabcontent">
+  <h3>2 truths 1 lie</h3>
+  <p>Which is the lie about the host?(in this case erin)</p>
+    <ul>
+        <li>I have a pet Rat</li>
+        <li>I am considered to be famous in the Philippines</li>
+        <li>I hate wearing socks</li>
+    </ul>
+</div>  
+        
+<div id="users" class="tabcontent">
+  <h3>2 truths 1 lie</h3>
+  <p>Which is the lie about the a user?(in this case Wes)</p>
+    <ul>
+        <li>I have eaten an average of 9 fundip packets in the past few days</li>
+        <li>We love Hack SC</li>
+        <li>I got my shoelaces from the President</li>
+    </ul>
+</div> 
+        
+<div id="world" class="tabcontent">
+  <h3>2 truths 1 lie</h3>
+  <p>Which is the lie about the World (in this case selena)?</p>
+    <ul>
+        <li>I love mayonnaise</li>
+        <li>i love ketchup</li>
+        <li>I love mustard</li>
+    </ul>
+</div> 
+
+
 	<!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -124,5 +191,6 @@
 
 <!-- Initialize Firebase -->
 <script src="/__/firebase/init.js"></script>
+    
 </BODY>
 </HTML>
