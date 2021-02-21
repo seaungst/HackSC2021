@@ -37,7 +37,6 @@ $("#link1").on('click', function(e) {
     });
 });
 
-let ref = firebase.database.ref("infos");
 
 
 

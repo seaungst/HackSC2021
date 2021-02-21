@@ -34,6 +34,9 @@
   background-color: #95B0CE;
 }
 
+.tabcontent {
+    background: #B3C5D9;
+}
 
 .sidenav {
   height: 100%; /* Full-height: remove this if you want "auto" height */
@@ -84,3 +87,6 @@
     background: #0A4465;
 }
 
+#hangman-image {
+    width: 200px;
+}
