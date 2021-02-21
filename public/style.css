@@ -1,0 +1,114 @@
+body {
+    background: #D1D9E3;
+    width: 100%
+}
+
+a {
+    color: #0A4465;
+}
+
+a:hover{
+    color: #0E7AB3;
+}
+
+#image-background {
+    overflow: hidden;
+}
+
+#background {
+    width: 1500px;
+    height: 100%;
+    background: url("../assets/background1.jpeg") repeat-x;
+    overflow: hidden;
+}
+
+#logo-image {
+    width: 100px;
+    border-width: 0px;
+}
+
+#logo-header {
+    font-size: 50px;
+    color: #FFFFFF;
+    background: #0A4465;
+}
+
+#room-code {
+    font-weight: bold;
+    font-size: 50px;
+    color: #0E7AB3;
+}
+
+#enter-room-host {
+   margin-left: 20px; 
+}
+
+#enter-room-participant {
+   margin-top: 20px; 
+}
+
+#footer-image {
+    width: 100px;
+    border-width: 0px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.navbar-custom {
+    background: #95B0CE;
+}
+
+.navbar-custom .navbar-brand, 
+.navbar-custom .navbar-text  {
+    background: #0A4465;
+    color: #FFFFFF;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.header {
+    background: #0A4465;
+    color: #FFFFFF;
+    font-size: 24px;
+    padding: 20px;
+}
+
+.sub-header {
+    background: #0A4465;
+    color: #FFFFFF;
+    font-size: 20px;
+    padding: 20px;
+}
+
+.info-text {
+    padding: 20px;
+    font-size: 16px;
+    color: #050E17;
+}
+
+.list-group-item {
+    border-color: #0A4465; 
+}
+
+.list-group {
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #050E17;
+    font-size: 14px;
+}
+
+.nav-item {
+    padding-right: 10px;
+}
+
+.form-group {
+    padding-left: 35px;
+    padding-right: 35px;
+    color: #050E17;
+}
+
+.btn-primary {
+    background: #0E7AB3;
+}
