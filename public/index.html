@@ -57,7 +57,7 @@
                     How to Get Started: Hosting a Room
                 </div>
 
-                <p class="info-text">Are you looking to introduce the members of your group to one another? <br> Here's how to create a room for your group to join.</p>
+                <p class="info-text">Are you looking to introducte the members of your group to one another? <br> Here's how to create a room for your group to join.</p>
 
                 <ol class="list-group">
                     <li class="list-group-item">1. Select "Create a Room" at the top of the site. </li>
@@ -101,7 +101,7 @@
                     <label for="host-name">Please enter your name:</label>
                     <input type="text" class="form-control" id="host-name" placeholder="Host Name">
                     <br>
-                    <button class="btn btn-primary" onClick="generateRoomCode()">Submit</button>
+                    <button class="btn btn-primary" onClick="generateRoomCode()" href="javascript:void(0)">Submit</button>
                 </div>
             </form>
             
@@ -111,12 +111,12 @@
                 </div>
                                 
                 <p class="info-text">
-                    Welcome, <span id="host-name-display">Host Name</span>!<br><br>
+                    Welcome, <span id="host-name-display">Host Name</span><br><br>
                     
                     Your room code is:<br><span id="room-code">000000</span>
                 </p>
                 
-                <button id="enter-room-host" class="btn btn-primary">Enter Room</button>
+                <button id="enter-room-host" class="btn btn-primary" onclick="location.href='../Host/HostMain.html'">Enter Room</button>
                 
             </div>
             
@@ -140,10 +140,10 @@
                     <label for="enter-room-code">Please enter the room code:</label>
                     <input type="text" class="form-control" id="enter-room-code" placeholder="Room Code">
                     
-                    <button id="enter-room-participant" class="btn btn-primary">Enter Room</button>
+
+                    <button id="enter-room-participant" class="btn btn-primary" onclick="startPlayer(); return false;">Enter Room</button>
                 </div>
-            </form>
-        
+            </form>   
             
         </div>
         
