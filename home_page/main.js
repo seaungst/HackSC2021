@@ -27,3 +27,10 @@ function generateRoomCode() {
     document.getElementById("host-name-display").innerHTML = hostName;
     
 }
+
+function startPlayer() {
+//    document.getElementById("player-name").textContent = document.getElementById("participant-name").value;
+//    document.getElementById("session-code").textContent = document.getElementById("enter-room-code").value;
+    
+    window.location.href = "../player/playerscreen.html";
+}
