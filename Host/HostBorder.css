@@ -1,5 +1,5 @@
 header {
-  background-color: #95B0CE;
+  background-color: #0A4465;
   padding: 30px;
   text-align: center;
   font-size: 35px;
@@ -34,19 +34,19 @@ header {
 
 #search{
     float:right;
-    background:green;
+    background:#95B0CE;
 }
 
 body, html {
   height: 100%;
   margin: 0;
-  font-family: Arial;
+
 }
 
 /* Style tab links */
 .tablink {
-  background-color: #555;
-  color: white;
+  background-color: #95B0CE;
+  color: #0A4465;
   float: left;
   border: none;
   outline: none;
@@ -68,8 +68,10 @@ body, html {
   height: 100%;
 }
 
-#Home {background-color: #e6f2ff;}
-#News {background-color: #E6E6FA;}
-#Contact {background-color: antiquewhite;}
-#About {background-color: #FFE4E1;}
-#SomethingFun  {background-color: white;}
+#Home {background-color: #B3C5D9;}
+#Polls {background-color: #B3C5D9;}
+#HangMan {background-color: #B3C5D9;}
+#2Truths {background-color: #B3C5D9;}
+#2Truths {background-color: #B3C5D9;}
+#SomethingFun  {background-color: #B3C5D9;}
+
