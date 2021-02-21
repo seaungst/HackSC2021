@@ -1,20 +1,21 @@
-window.addEventListener("load", function(windowLoadE) {
-    var p, letter, button, holder;
-    holder = document.getElementById("letter-buttons");
-    p = document.createElement("p");
+var pages = ["waiting-screen", "letter-vote", "two-truths", "question-response", "poll"]
 
-    for (var i = 65; i <= 90; i++) {
-        letter = String.fromCharCode(i);
-        button = document.createElement("button");
-        button.innerHTML = letter;
-        button.setAttribute("data-letter", letter);
-        button.onclick = function(e) { 
-            setLetter(this.getAttribute("data-letter"));
-        };
-        p.appendChild( button );
+function goTo(pageID) {
+    for (var i = 0; i < pages.length; i++) {
+        document.getElementById(pages[i]).style.display = "none";
     }
-});
+    document.getElementById(pageID).style.display = "block";
+    
+}
 
-function setLetter(letter) {
-    // output letter from clicking on letter button
+function getData(formID) {
+    var IDasID = "#" + formID;
+    var values = $(IDasID).serialize();
+    
+    var temp = document.getElementById("test-output").textContent;
+    document.getElementById("test-output").textContent = temp + values + ", ";
+    
+    document.getElementById(formID).reset();
+    
+    goTo("waiting-screen");
 }
