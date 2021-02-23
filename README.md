@@ -11,3 +11,6 @@ Unsure of how to get your team acquainted at your first meeting? With Ice Breakr
 
 We built this website using Firebase to host our HTML pages that we styled using CSS and Bootstrap and added functionality to using JavaScript.
 
+## Preview
+
+Please visit http://icebreakr.online to see a preview of our website with placeholder data.
